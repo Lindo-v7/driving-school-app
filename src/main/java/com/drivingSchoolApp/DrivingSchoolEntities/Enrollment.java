@@ -16,12 +16,53 @@ public class Enrollment {
   @ManyToOne
   private Student student;
 
-  //@ManyToOne
-  //private Course course;
+  @ManyToOne
+  private Course course;
 
   private String enrollmentStatus;
+  
+  
 
-  // Getters and Setters omitted for brevity
-
-  // Add constructors and other methods as needed
+	public Enrollment(int enrollmentId, Student student, Course course, String enrollmentStatus) {
+	super();
+	this.enrollmentId = enrollmentId;
+	this.student = student;
+	this.course = course;
+	this.enrollmentStatus = enrollmentStatus;
 }
+
+	public int getEnrollmentId() {
+		return enrollmentId;
+	}
+	
+	public void setEnrollmentId(int enrollmentId) {
+		this.enrollmentId = enrollmentId;
+	}
+	
+	public Student getStudent() {
+		return student;
+	}
+	
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+	
+	public Course getCourse() {
+		return course;
+	}
+	
+	public void setCourse(Course course) {
+		this.course = course;
+	}
+	
+	public String getEnrollmentStatus() {
+		return enrollmentStatus;
+	}
+	
+	public void setEnrollmentStatus(String enrollmentStatus) {
+		this.enrollmentStatus = enrollmentStatus;
+	}
+
+  
+}
+
