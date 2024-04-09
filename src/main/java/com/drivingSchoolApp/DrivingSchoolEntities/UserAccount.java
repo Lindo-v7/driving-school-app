@@ -12,16 +12,17 @@ public class UserAccount {
 
 	@Id
   	@GeneratedValue(strategy = GenerationType.IDENTITY)
-  	private int userId;
+  	private int userID;
 
   	@Column(unique = true)
+  	
   	private String username;
 
   	private String password; // Consider using a secure password hashing mechanism
 
   	public UserAccount(int userId, String username, String password, Role role) {
 	super();
-	this.userId = userId;
+	this.userID = userId;
 	this.username = username;
 	this.password = password;
 	this.role = role;
@@ -31,11 +32,11 @@ public class UserAccount {
 	private Role role;
 		
 	public int getUserId() {
-		return userId;
+		return userID;
 	}
 	
 	public void setUserId(int userId) {
-		this.userId = userId;
+		this.userID = userId;
 	}
 	
 	public String getUsername() {
