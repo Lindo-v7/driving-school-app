@@ -14,18 +14,34 @@ public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int courseId;
+    private int courseID;
   
     private String courseName;
     private String description;
     private int duration; // Duration in hours
     private BigDecimal fee; // Use BigDecimal for monetary values
     private String prerequisites;
-	public int getCourseId() {
-		return courseId;
+    
+    public Course() {
+    	
+    }
+    @Autowired
+	public Course(int courseID, String courseName, String description, int duration, BigDecimal fee,
+			String prerequisites) {
+		this.courseID = courseID;
+		this.courseName = courseName;
+		this.description = description;
+		this.duration = duration;
+		this.fee = fee;
+		this.prerequisites = prerequisites;
 	}
-	public void setCourseId(int courseId) {
-		this.courseId = courseId;
+    
+    
+	public int getCourseID() {
+		return courseID;
+	}
+	public void setCourseId(int courseID) {
+		this.courseID = courseID;
 	}
 	public String getCourseName() {
 		return courseName;
@@ -55,18 +71,6 @@ public class Course {
 		return prerequisites;
 	}
 	public void setPrerequisites(String prerequisites) {
-		this.prerequisites = prerequisites;
-	}
-	
-	@Autowired
-	public Course(int courseId, String courseName, String description, int duration, BigDecimal fee,
-			String prerequisites) {
-		super();
-		this.courseId = courseId;
-		this.courseName = courseName;
-		this.description = description;
-		this.duration = duration;
-		this.fee = fee;
 		this.prerequisites = prerequisites;
 	}
     

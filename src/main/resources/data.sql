@@ -150,4 +150,3 @@ CREATE TABLE MCQQuestion (
     option4 VARCHAR(255) NOT NULL,
     correct_option INT NOT NULL
 );
-
