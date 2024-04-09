@@ -20,7 +20,6 @@ public class Course {
     private String description;
     private int duration; // Duration in hours
     private BigDecimal fee; // Use BigDecimal for monetary values
-    private String prerequisites;
     
     public Course() {
     	
@@ -33,7 +32,6 @@ public class Course {
 		this.description = description;
 		this.duration = duration;
 		this.fee = fee;
-		this.prerequisites = prerequisites;
 	}
     
     
@@ -67,12 +65,7 @@ public class Course {
 	public void setFee(BigDecimal fee) {
 		this.fee = fee;
 	}
-	public String getPrerequisites() {
-		return prerequisites;
-	}
-	public void setPrerequisites(String prerequisites) {
-		this.prerequisites = prerequisites;
-	}
+
     
   }
   
