@@ -132,8 +132,7 @@ CREATE TABLE Role (
 );
 
 -- Table: StudentTest
-CREATE TABLE StudentTest (
-    student_id INT,
+CREATE TABLE TestScore (
     test_id INT,
     score DECIMAL(5,2),
     date_taken DATE NOT NULL DEFAULT GETDATE(),
