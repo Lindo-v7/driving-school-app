@@ -20,7 +20,6 @@ CREATE TABLE Course (
     Fee DECIMAL(10, 2),
     Prerequisites TEXT
 );
-
 -- Table: Enrollment
 CREATE TABLE Enrollment (
     EnrollmentID INT PRIMARY KEY,
