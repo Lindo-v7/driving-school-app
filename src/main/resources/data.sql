@@ -131,14 +131,6 @@ CREATE TABLE Role (
     RoleName VARCHAR(20) UNIQUE
 );
 
--- Table: Test
-CREATE TABLE Test (
-    test_id INT PRIMARY KEY IDENTITY,
-    test_type VARCHAR(50) NOT NULL,
-    description TEXT,
-    date_conducted DATE NOT NULL DEFAULT GETDATE()
-);
-
 -- Table: StudentTest
 CREATE TABLE StudentTest (
     student_id INT,
